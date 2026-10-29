@@ -85,7 +85,7 @@ docker run -d -p 8084:80 --name turismo-web nani2516/turismo-ecuador:1.0
 Abrir en el navegador:
 
 ```text
-http://localhost:8080
+http://localhost:8084
 ```
 
 ## 👩‍💻 Autora

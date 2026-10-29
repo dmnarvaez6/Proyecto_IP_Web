@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Descubre Ecuador</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>Descubre Ecuador</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="paquetes.html">Paquetes</a></li>
+            <li><a href="itinerarios.html">Itinerarios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="banner-pagina">
+        <h1>Contáctanos</h1>
+        <p>Estamos listos para ayudarte a planificar tu próxima aventura.</p>
+    </section>
+
+    <section class="contacto-container">
+
+        <div class="info-contacto">
+
+            <h2>Información de Contacto</h2>
+
+            <p>
+                Completa el formulario y nos pondremos en contacto contigo.
+            </p>
+
+            <div class="dato">
+                📍 Sangolquí, Ecuador
+            </div>
+
+            <div class="dato">
+                📞 +593 99 999 9999
+            </div>
+
+            <div class="dato">
+                ✉ contacto@descubreecuador.com
+            </div>
+
+        </div>
+
+        <form class="formulario">
+
+            <h2>Formulario de Consulta</h2>
+
+            <label for="nombre">Nombre completo</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                minlength="3">
+
+            <label for="correo">Correo electrónico</label>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                required>
+
+            <label for="telefono">Teléfono</label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required>
+
+            <label for="destino">Destino de interés</label>
+
+            <select
+                id="destino"
+                name="destino"
+                required>
+
+                <option value="">
+                    Seleccione un destino
+                </option>
+
+                <option>Quito</option>
+                <option>Baños</option>
+                <option>Cuenca</option>
+                <option>Galápagos</option>
+                <option>Quito & Cuenca</option>
+                <option>Ecuador Esencial</option>
+                <option>Galápagos Vivo</option>
+
+            </select>
+
+            <label for="mensaje">Mensaje</label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="6"
+                required>
+            </textarea>
+
+            <button type="submit">
+                Enviar Consulta
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Descubre Ecuador</p>
+</footer>
+
+</body>
+</html>

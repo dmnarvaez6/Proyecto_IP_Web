@@ -1,0 +1,831 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f7f3eb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo h2{
+    color:#0d4b3e;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0d4b3e;
+    font-weight:bold;
+}
+
+/* HERO */
+
+
+.hero{
+    height:85vh;
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("img/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding:8%;
+}
+
+
+
+.hero-texto{
+    color:white;
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#d67d45;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+}
+
+/* INTRO */
+
+.intro{
+    padding:80px 8%;
+}
+
+.intro h2{
+    font-size:3rem;
+    color:#0d4b3e;
+    margin-bottom:15px;
+}
+
+/* DESTINOS */
+
+.destacados{
+    padding:0 8% 80px;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+}
+
+.card{
+    background:white;
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.contenido{
+    padding:20px;
+}
+
+.contenido h3{
+    color:#0d4b3e;
+    margin-bottom:10px;
+}
+
+/* PROMOCION */
+
+.promocion{
+    background:#0d4b3e;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    padding:80px 8%;
+}
+
+.promocion img{
+    width:400px;
+    border-radius:10px;
+}
+
+.texto-promocion h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#082f27;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* SECCION AVENTURAS */
+
+.aventuras{
+    padding: 80px 8%;
+    background: #f7f3eb;
+}
+
+.titulo-seccion{
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2{
+    font-size: 3rem;
+    color: #0d4b3e;
+    margin-bottom: 15px;
+}
+
+.grid-destinos{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+
+.destino-card{
+    position:relative;
+    overflow:hidden;
+    height:500px;
+}
+
+.destino-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.destino-card:hover img{
+    transform:scale(1.05);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.1)
+    );
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    padding:25px;
+}
+
+.overlay h3{
+    color:white;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.overlay p{
+    color:white;
+    max-width:300px;
+}
+
+.btn-circulo{
+    width:45px;
+    height:45px;
+
+    border:1px solid white;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.btn-circulo:hover{
+    background:white;
+    color:#0d4b3e;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .grid-destinos{
+        grid-template-columns:1fr;
+    }
+
+    .destino-card{
+        height:350px;
+    }
+
+    .titulo-seccion h2{
+        font-size:2rem;
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .promocion{
+        flex-direction:column;
+    }
+
+    .promocion img{
+        width:100%;
+    }
+}
+
+/* PAGINA DESTINOS */
+
+.banner-pagina{
+    background:#0d4b3e;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.banner-pagina h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.destino-detalle{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    padding:80px 8%;
+}
+
+.destino-detalle img{
+    width:50%;
+    height:450px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.info-destino{
+    flex:1;
+}
+
+.info-destino h2{
+    font-size:3rem;
+    color:#0d4b3e;
+    margin-bottom:20px;
+}
+
+.info-destino p{
+    margin-bottom:20px;
+}
+
+.info-destino ul{
+    margin-left:20px;
+    margin-bottom:30px;
+}
+
+.info-destino li{
+    margin-bottom:10px;
+}
+
+.reversa{
+    flex-direction:row-reverse;
+}
+
+@media(max-width:768px){
+
+    .destino-detalle,
+    .reversa{
+        flex-direction:column;
+    }
+
+    .destino-detalle img{
+        width:100%;
+        height:300px;
+    }
+
+    .banner-pagina h1{
+        font-size:2.5rem;
+    }
+}
+
+/* GALERIA */
+
+.galeria-container{
+    padding:80px 8%;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+}
+
+.foto{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.foto img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+.foto:hover img{
+    transform:scale(1.08);
+}
+
+.foto figcaption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+
+    padding:15px;
+
+    color:white;
+    font-weight:bold;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.8)
+    );
+}
+
+/* =========================
+   PAQUETES TURÍSTICOS
+========================= */
+
+.paquetes-container{
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+.paquete{
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.paquete:hover{
+    transform: translateY(-8px);
+}
+
+.paquete h3{
+    color: #0d4b3e;
+    margin-bottom: 15px;
+}
+
+.duracion{
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.paquete h2{
+    font-size: 3.5rem;
+    color: #0d4b3e;
+    margin-bottom: 25px;
+}
+
+.paquete ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.paquete li{
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.acciones-paquete{
+    display:flex;
+    gap:12px;
+
+    margin-top:auto;
+}
+
+.btn-itinerario,
+.btn-paquete{
+    flex: 1;
+
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+/* ITINERARIO NORMAL */
+
+.btn-itinerario{
+    border: 2px solid #0d4b3e;
+    background: white;
+    color: #0d4b3e;
+}
+
+.btn-itinerario:hover{
+    background: #0d4b3e;
+    color: white;
+}
+
+/* RESERVAR NORMAL */
+
+.btn-paquete{
+    background: #0d4b3e;
+    color: white;
+}
+
+.btn-paquete:hover{
+    background: #08372d;
+}
+
+/* =========================
+   PAQUETE DESTACADO
+========================= */
+
+.destacado{
+    background:#0d4b3e;
+    color:white;
+}
+
+.destacado h2,
+.destacado h3{
+    color: white;
+}
+
+.destacado .duracion{
+    color: #d9d9d9;
+}
+
+/* BOTÓN ITINERARIO DEL DESTACADO */
+
+.destacado .btn-itinerario{
+    background: white;
+    color: #0d4b3e;
+    border: 2px solid white;
+}
+
+.destacado .btn-itinerario:hover{
+    background: #f2f2f2;
+    color: #0d4b3e;
+}
+
+/* BOTÓN RESERVAR DEL DESTACADO */
+
+.destacado .btn-paquete{
+    background: white;
+    color: #0d4b3e;
+}
+
+.destacado .btn-paquete:hover{
+    background: #f2f2f2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .paquetes-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paquete{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .destacado{
+        transform: none;
+    }
+
+    .acciones-paquete{
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   ITINERARIOS
+========================= */
+
+.itinerario{
+    padding: 60px 8%;
+}
+
+.itinerario h2{
+    color: #0d4b3e;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.dia{
+    background: white;
+
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border-left: 6px solid #0d4b3e;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.dia h3{
+    color: #0d4b3e;
+    margin-bottom: 15px;
+}
+
+.dia ul{
+    margin-left: 20px;
+}
+
+.dia li{
+    margin-bottom: 10px;
+}
+
+.itinerario p{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto-container{
+    padding:80px 8%;
+
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:40px;
+}
+
+.info-contacto{
+    background:#0d4b3e;
+    color:white;
+
+    padding:40px;
+
+    border-radius:12px;
+}
+
+.info-contacto h2{
+    margin-bottom:20px;
+}
+
+.info-contacto p{
+    margin-bottom:30px;
+}
+
+.dato{
+    margin-bottom:20px;
+    font-size:1.1rem;
+}
+
+.formulario{
+    background:white;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    display:flex;
+    flex-direction:column;
+}
+
+.formulario h2{
+    color:#0d4b3e;
+    margin-bottom:25px;
+}
+
+.formulario label{
+    margin-top:15px;
+    margin-bottom:8px;
+
+    font-weight:bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:1rem;
+}
+
+.formulario textarea{
+    resize:vertical;
+}
+
+.formulario button{
+    margin-top:25px;
+
+    background:#0d4b3e;
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.formulario button:hover{
+    background:#08372d;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .contacto-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#082f27;
+    color:white;
+    margin-top:60px;
+}
+
+.footer-contenido{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    padding:50px 8%;
+}
+
+.footer-seccion h3{
+    margin-bottom:15px;
+    color:#ffffff;
+}
+
+.footer-seccion p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+.footer-seccion ul{
+    list-style:none;
+}
+
+.footer-seccion ul li{
+    margin-bottom:10px;
+}
+
+.footer-seccion a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+.footer-seccion a:hover{
+    color:#d67d45;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.2);
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.footer-bottom p{
+    margin:5px 0;
+}
+
+.redes-sociales{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.redes-sociales a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+}
+
+.redes-sociales a:hover{
+    color:#d67d45;
+}

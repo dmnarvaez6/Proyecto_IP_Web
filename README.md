@@ -77,7 +77,7 @@ docker pull nani2516/turismo-ecuador:1.0
 ### 3. Crear y ejecutar el contenedor
 
 ```bash
-docker run -d -p 8080:80 --name turismo-web nani2516/turismo-ecuador:1.0
+docker run -d -p 8084:80 --name turismo-web nani2516/turismo-ecuador:1.0
 ```
 
 ### 4. Abrir el sitio web
